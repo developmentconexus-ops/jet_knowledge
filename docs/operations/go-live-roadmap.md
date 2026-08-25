@@ -10,30 +10,38 @@ Board: https://trello.com/b/4h9NzL77/jet-knowledge-metal-nobre
 
 The launch plan separates **phase** from **status**:
 
-- phase: `[GL]`, `[PRE]`, `[LAUNCH]`, `[POST]`, `[OPT]`;
+- phase: Trello color label;
 - status: `Backlog`, `Próximo`, `Em andamento`, `Aguardando / Validar`, `Concluído`.
 
-A task can therefore be a go-live blocker and simultaneously be waiting on a third party.
+Color convention:
+
+- 🔴 red — go-live blocker;
+- 🟡 yellow — pre-launch;
+- 🔵 blue — launch / cutover;
+- 🟢 green — post-launch;
+- 🟣 purple — continuous optimization.
+
+A task can therefore be a red go-live blocker and simultaneously be waiting on a third party.
 
 ## Phase portfolio at this checkpoint
 
-### Go-live blockers `[GL]`
+### 🔴 Go-live blockers
 
 `PEN-001`, `PEN-002`, `PEN-007`, `PEN-008`, `PEN-009`, `PEN-010`, `PEN-014`, `PEN-018`, `PEN-019`, `PEN-020`, `PEN-024`, `PEN-026`, `PEN-029`, `PEN-030`, `PEN-031`, `PEN-033`, `PEN-035`.
 
-### Pré-lançamento `[PRE]`
+### 🟡 Pré-lançamento
 
 `PEN-003`, `PEN-004`, `PEN-005`, `PEN-006`, `PEN-011`, `PEN-015`, `PEN-016`, `PEN-017`, `PEN-022`, `PEN-023`, `PEN-025`, `PEN-034`.
 
-### Lançamento / cutover `[LAUNCH]`
+### 🔵 Lançamento / cutover
 
 `PEN-032`, `PEN-036`.
 
-### Pós-lançamento `[POST]`
+### 🟢 Pós-lançamento
 
 `PEN-012`, `PEN-021`, `PEN-027`, `PEN-028`, `PEN-037`.
 
-### Melhoria contínua `[OPT]`
+### 🟣 Melhoria contínua
 
 `PEN-013`.
 
@@ -58,11 +66,11 @@ These dates are planning targets, not the official go-live date.
 
 - `PEN-036` — Go/No-Go and cutover execution: derived from the official go-live chosen in `PEN-031`.
 - `PEN-037` — seven-day hypercare: derived from the actual go-live date.
-- `[POST]` and `[OPT]` work has no artificial deadline unless it becomes operationally relevant.
+- green post-launch and purple optimization work has no artificial deadline unless it becomes operationally relevant.
 
 ## Go/No-Go minimum readiness model
 
-Before a `GO`, the project should have evidence that the relevant `[GL]` items are resolved or their residual risk is explicitly accepted. At minimum this covers:
+Before a `GO`, the project should have evidence that the relevant red go-live blockers are resolved or their residual risk is explicitly accepted. At minimum this covers:
 
 1. payment architecture;
 2. freight architecture;
