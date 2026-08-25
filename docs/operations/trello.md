@@ -16,15 +16,15 @@ O Trello é a fonte de verdade do estado operacional das pendências `PEN-###`.
 
 ## Etiquetas coloridas — fase de lançamento
 
-A cor da etiqueta indica quando a pendência precisa ser tratada no ciclo. A coluna continua indicando o estado atual. Os títulos permanecem limpos no formato `PEN-### — descrição`.
+A etiqueta indica quando a pendência precisa ser tratada no ciclo. A coluna continua indicando o estado atual. Os títulos permanecem limpos no formato `PEN-### — descrição`.
 
-- 🔴 **Vermelho — Go-live blocker**. Precisa estar resolvido, explicitamente aceito ou ter risco formalmente aceito antes do lançamento.
-- 🟡 **Amarelo — Pré-lançamento**. Deve idealmente estar pronto antes de publicar, mas não é blocker técnico absoluto.
-- 🔵 **Azul — Lançamento / cutover**. Executado na preparação final ou na janela de publicação.
-- 🟢 **Verde — Pós-lançamento**. Pode ser ativado depois da loja entrar no ar.
-- 🟣 **Roxo — Melhoria contínua**. Otimização, experimento ou evolução; não deve segurar o go-live.
+- 🔴 **Go-live blocker**. Precisa estar resolvido, explicitamente aceito ou ter risco formalmente aceito antes do lançamento.
+- 🟡 **Pré-lançamento**. Deve idealmente estar pronto antes de publicar, mas não é blocker técnico absoluto.
+- 🔵 **Lançamento / Cutover**. Executado na preparação final ou na janela de publicação.
+- 🟢 **Pós-lançamento**. Pode ser ativado depois da loja entrar no ar.
+- 🟣 **Otimização**. Melhoria contínua, experimento ou evolução; não deve segurar o go-live.
 
-A integração Trello disponível nesta sessão consegue aplicar etiquetas existentes, mas não renomeá-las. Por isso a correlação canônica é pela cor; os nomes podem ser adicionados uma única vez pela interface do Trello sem alterar os vínculos dos cartões.
+Os nomes e cores acima foram verificados diretamente no board. O Trello, e não este arquivo, continua sendo a autoridade para a etiqueta atualmente vinculada a cada cartão.
 
 ## Regras
 
@@ -36,6 +36,7 @@ A integração Trello disponível nesta sessão consegue aplicar etiquetas exist
 6. Não duplicar cartão para a mesma pendência; atualizar/mover o cartão existente.
 7. Uma etiqueta vermelha não significa automaticamente `Próximo`: um blocker pode estar em `Aguardando / Validar`, `Em andamento` ou `Backlog`. Fase e estado são dimensões independentes.
 8. Itens verdes e roxos não devem ocupar `Próximo` antes da hora sem uma razão explícita.
+9. Se o usuário alterar cartão, coluna, etiqueta ou data diretamente no Trello, a próxima leitura do board prevalece sobre qualquer snapshot anterior desta conversa ou do GitHub.
 
 ## Datas e compromissos
 
@@ -48,4 +49,4 @@ A integração Trello disponível nesta sessão consegue aplicar etiquetas exist
 
 ## Integração conceitual
 
-`PEN-###` é a chave de correlação entre GitHub e Trello. O board continua sendo a fonte de status e datas atuais; a cor da etiqueta é a fonte visual da fase de lançamento.
+`PEN-###` é a chave de correlação entre GitHub e Trello. O board continua sendo a fonte de status, fase e datas atuais.
