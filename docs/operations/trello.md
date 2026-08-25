@@ -6,13 +6,23 @@ Board: https://trello.com/b/4h9NzL77/jet-knowledge-metal-nobre
 
 O Trello é a fonte de verdade do estado operacional das pendências `PEN-###`.
 
-## Colunas
+## Colunas — estado atual
 
 - `Backlog` — identificado, mas ainda não priorizado para execução imediata.
 - `Próximo` — selecionado para execução em curto prazo.
 - `Em andamento` — trabalho efetivamente iniciado.
 - `Aguardando / Validar` — depende de terceiro, decisão, confirmação técnica ou evidência adicional.
 - `Concluído` — ação encerrada e validada.
+
+## Prefixos — fase de lançamento
+
+O prefixo do cartão indica quando aquela pendência precisa ser tratada no ciclo. A coluna continua indicando o estado atual.
+
+- `[GL]` — **Go-live blocker**. Precisa estar resolvido, explicitamente aceito ou ter risco formalmente aceito antes do lançamento.
+- `[PRE]` — **Pré-lançamento**. Deve idealmente estar pronto antes de publicar, mas não é blocker técnico absoluto.
+- `[LAUNCH]` — **Lançamento / cutover**. Executado na preparação final ou na janela de publicação.
+- `[POST]` — **Pós-lançamento**. Pode ser ativado depois da loja entrar no ar.
+- `[OPT]` — **Melhoria contínua**. Otimização, experimento ou evolução; não deve segurar o go-live.
 
 ## Regras
 
@@ -22,18 +32,17 @@ O Trello é a fonte de verdade do estado operacional das pendências `PEN-###`.
 4. Antes de responder “o que está pendente?”, reler o Trello.
 5. Quando uma pendência gerar conhecimento novo, registrar o resultado no GitHub antes de considerá-la encerrada quando isso for material.
 6. Não duplicar cartão para a mesma pendência; atualizar/mover o cartão existente.
+7. `[GL]` não significa automaticamente `Próximo`: um blocker pode estar em `Aguardando / Validar`, `Em andamento` ou `Backlog`. Fase e estado são dimensões independentes.
+8. Itens `[POST]` e `[OPT]` não devem ocupar `Próximo` antes da hora sem uma razão explícita.
 
 ## Datas e compromissos
 
-1. Usar data de vencimento no Trello apenas para reuniões, compromissos, deadlines ou datas-alvo realmente acordadas.
-2. Não inventar datas para trabalhos ainda não agendados.
+1. Datas no Trello podem representar reunião, deadline externo ou **data-alvo de planejamento**.
+2. Datas-alvo definidas durante o planejamento são revisáveis; o estado/due date atual no Trello prevalece sobre snapshots do GitHub.
 3. A data de uma reunião não significa que a pendência está concluída; o cartão continua aberto até a decisão ou entrega esperada ser registrada.
-4. Pendências de decisão com data devem ter checklist para garantir que a reunião gere evidências comparáveis, decisão e novas pendências quando necessário.
-
-### Compromissos atuais
-
-- `PEN-029` — estudar e definir gateway de pagamento. Reunião em 25/08/2026 às 09:30 (BRT).
-- `PEN-030` — estudar e definir módulo/arquitetura de frete. Prazo ainda não definido.
+4. Pendências de decisão devem registrar os critérios usados, a decisão, justificativa e novas pendências quando necessário.
+5. A data oficial de go-live não deve ser inferida das datas-alvo de preparação. Ela será definida explicitamente em `PEN-031`.
+6. `PEN-036` (Go/No-Go) e `PEN-037` (hypercare) recebem datas derivadas somente após a definição do go-live.
 
 ## Integração conceitual
 
