@@ -42,6 +42,7 @@ Board: https://trello.com/b/4h9NzL77/jet-knowledge-metal-nobre
 - `PEN-036` — Realizar Go/No-Go e executar checklist de cutover.
 - `PEN-037` — Operar hypercare dos primeiros 7 dias pós-go-live.
 - `PEN-038` — Confirmar passagem de bastão para suporte JET.
+- `PEN-039` — Extrair Pacote A de evidências visuais dos treinamentos conforme `docs/evidence/phase-4-visual-evidence-map.md`.
 
 ## Regra operacional
 
