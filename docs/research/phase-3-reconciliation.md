@@ -191,3 +191,12 @@ No structural contradiction between the two modules blocks consolidation. The ma
 - unresolved questions.
 
 The next stage is **Phase 4 — Visual Evidence Map**. Phase 4 must use the reconciled knowledge to request only screenshots/clips that materially improve operational documentation, field/path certainty, guardrails or future agent grounding.
+
+## Verification checkpoint
+
+Verified after the Phase 3 writes:
+
+- Trello: 39 open cards = 38 `PEN-###` items + 1 legend card;
+- `PEN-038` exists in `Aguardando / Validar` with the `Pré-lançamento` label;
+- GitHub branch `docs/bootstrap-jet-knowledge`: 19 commits ahead of `main`, 0 behind at the verification point;
+- Phase 3, decision, uncertainty and pending-index files were read back from the branch before closing the phase.
