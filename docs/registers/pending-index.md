@@ -32,6 +32,8 @@ Board: https://trello.com/b/4h9NzL77/jet-knowledge-metal-nobre
 - `PEN-026` — Limpar produtos de teste e preservar grupos fixos da home.
 - `PEN-027` — Criar processo para leads de Produtos Aguardados.
 - `PEN-028` — Estruturar de/para de categorias para marketplace/Google.
+- `PEN-029` — Estudar e definir gateway de pagamento; reunião em 25/08/2026 às 09:30 (BRT).
+- `PEN-030` — Estudar e definir módulo/arquitetura de frete.
 
 ## Regra operacional
 
