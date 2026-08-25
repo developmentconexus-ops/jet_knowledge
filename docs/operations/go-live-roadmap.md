@@ -31,7 +31,9 @@ A task can therefore be a red go-live blocker and simultaneously be waiting on a
 
 ### 🟡 Pré-lançamento
 
-`PEN-003`, `PEN-004`, `PEN-005`, `PEN-006`, `PEN-011`, `PEN-015`, `PEN-016`, `PEN-017`, `PEN-022`, `PEN-023`, `PEN-025`, `PEN-034`, `PEN-038`.
+`PEN-003`, `PEN-004`, `PEN-005`, `PEN-006`, `PEN-011`, `PEN-015`, `PEN-016`, `PEN-017`, `PEN-022`, `PEN-023`, `PEN-025`, `PEN-034`, `PEN-038`, `PEN-039`.
+
+`PEN-039` is the knowledge/evidence workstream for extracting the high-value visual Pack A defined in `docs/evidence/phase-4-visual-evidence-map.md`. It is pre-launch support work, not a technical go-live blocker by itself.
 
 ### 🔵 Lançamento / cutover
 
@@ -66,6 +68,7 @@ These dates are planning targets, not the official go-live date.
 
 - `PEN-036` — Go/No-Go and cutover execution: derived from the official go-live chosen in `PEN-031`.
 - `PEN-037` — seven-day hypercare: derived from the actual go-live date.
+- `PEN-039` — visual evidence extraction currently has no artificial deadline; it is tracked live in Trello and should not block technical go-live unless a specific acceptance gate later depends on it.
 - green post-launch and purple optimization work has no artificial deadline unless it becomes operationally relevant.
 
 ## Go/No-Go minimum readiness model
