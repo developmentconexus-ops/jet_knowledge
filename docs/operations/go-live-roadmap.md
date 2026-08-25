@@ -31,7 +31,7 @@ A task can therefore be a red go-live blocker and simultaneously be waiting on a
 
 ### 🟡 Pré-lançamento
 
-`PEN-003`, `PEN-004`, `PEN-005`, `PEN-006`, `PEN-011`, `PEN-015`, `PEN-016`, `PEN-017`, `PEN-022`, `PEN-023`, `PEN-025`, `PEN-034`.
+`PEN-003`, `PEN-004`, `PEN-005`, `PEN-006`, `PEN-011`, `PEN-015`, `PEN-016`, `PEN-017`, `PEN-022`, `PEN-023`, `PEN-025`, `PEN-034`, `PEN-038`.
 
 ### 🔵 Lançamento / cutover
 
@@ -58,7 +58,7 @@ These dates are planning targets, not the official go-live date.
 | 31 Aug 2026 | `PEN-014`, `PEN-019` — sender and company/email identity data |
 | 1 Sep 2026 | `PEN-005`, `PEN-018`, `PEN-022` — brand mapping, store parameters and banner specifications |
 | 2 Sep 2026 | `PEN-004`, `PEN-007`, `PEN-015`, `PEN-020`, `PEN-033` — category presentation, product-data readiness, e-mail routing, privacy and admin access |
-| 3 Sep 2026 | `PEN-003`, `PEN-016`, `PEN-017` — navigation refinement, Fale Conosco and transactional templates |
+| 3 Sep 2026 | `PEN-003`, `PEN-016`, `PEN-017`, `PEN-038` — navigation refinement, Fale Conosco, transactional templates and support handoff verification |
 | 4 Sep 2026 | `PEN-006`, `PEN-011`, `PEN-023`, `PEN-024`, `PEN-032`, `PEN-034` — brands, porcelain UX, banners, institutional content, cutover plan and analytics readiness |
 | 7 Sep 2026 | `PEN-025`, `PEN-035` — priority SEO and end-to-end launch validation |
 
