@@ -14,15 +14,17 @@ O Trello é a fonte de verdade do estado operacional das pendências `PEN-###`.
 - `Aguardando / Validar` — depende de terceiro, decisão, confirmação técnica ou evidência adicional.
 - `Concluído` — ação encerrada e validada.
 
-## Prefixos — fase de lançamento
+## Etiquetas coloridas — fase de lançamento
 
-O prefixo do cartão indica quando aquela pendência precisa ser tratada no ciclo. A coluna continua indicando o estado atual.
+A cor da etiqueta indica quando a pendência precisa ser tratada no ciclo. A coluna continua indicando o estado atual. Os títulos permanecem limpos no formato `PEN-### — descrição`.
 
-- `[GL]` — **Go-live blocker**. Precisa estar resolvido, explicitamente aceito ou ter risco formalmente aceito antes do lançamento.
-- `[PRE]` — **Pré-lançamento**. Deve idealmente estar pronto antes de publicar, mas não é blocker técnico absoluto.
-- `[LAUNCH]` — **Lançamento / cutover**. Executado na preparação final ou na janela de publicação.
-- `[POST]` — **Pós-lançamento**. Pode ser ativado depois da loja entrar no ar.
-- `[OPT]` — **Melhoria contínua**. Otimização, experimento ou evolução; não deve segurar o go-live.
+- 🔴 **Vermelho — Go-live blocker**. Precisa estar resolvido, explicitamente aceito ou ter risco formalmente aceito antes do lançamento.
+- 🟡 **Amarelo — Pré-lançamento**. Deve idealmente estar pronto antes de publicar, mas não é blocker técnico absoluto.
+- 🔵 **Azul — Lançamento / cutover**. Executado na preparação final ou na janela de publicação.
+- 🟢 **Verde — Pós-lançamento**. Pode ser ativado depois da loja entrar no ar.
+- 🟣 **Roxo — Melhoria contínua**. Otimização, experimento ou evolução; não deve segurar o go-live.
+
+A integração Trello disponível nesta sessão consegue aplicar etiquetas existentes, mas não renomeá-las. Por isso a correlação canônica é pela cor; os nomes podem ser adicionados uma única vez pela interface do Trello sem alterar os vínculos dos cartões.
 
 ## Regras
 
@@ -32,8 +34,8 @@ O prefixo do cartão indica quando aquela pendência precisa ser tratada no cicl
 4. Antes de responder “o que está pendente?”, reler o Trello.
 5. Quando uma pendência gerar conhecimento novo, registrar o resultado no GitHub antes de considerá-la encerrada quando isso for material.
 6. Não duplicar cartão para a mesma pendência; atualizar/mover o cartão existente.
-7. `[GL]` não significa automaticamente `Próximo`: um blocker pode estar em `Aguardando / Validar`, `Em andamento` ou `Backlog`. Fase e estado são dimensões independentes.
-8. Itens `[POST]` e `[OPT]` não devem ocupar `Próximo` antes da hora sem uma razão explícita.
+7. Uma etiqueta vermelha não significa automaticamente `Próximo`: um blocker pode estar em `Aguardando / Validar`, `Em andamento` ou `Backlog`. Fase e estado são dimensões independentes.
+8. Itens verdes e roxos não devem ocupar `Próximo` antes da hora sem uma razão explícita.
 
 ## Datas e compromissos
 
@@ -46,4 +48,4 @@ O prefixo do cartão indica quando aquela pendência precisa ser tratada no cicl
 
 ## Integração conceitual
 
-`PEN-###` é a chave de correlação entre GitHub e Trello. URLs específicas de cartão podem ser acrescentadas ao índice do GitHub quando isso trouxer valor, mas o board continua sendo a fonte de status.
+`PEN-###` é a chave de correlação entre GitHub e Trello. O board continua sendo a fonte de status e datas atuais; a cor da etiqueta é a fonte visual da fase de lançamento.
