@@ -36,14 +36,15 @@ Board: https://trello.com/b/4h9NzL77/jet-knowledge-metal-nobre
 - `PEN-030` — Estudar e definir módulo/arquitetura de frete.
 - `PEN-031` — Fechar data-alvo de go-live e critérios de readiness.
 - `PEN-032` — Planejar publicação, domínio/DNS e cutover.
-- `PEN-033` — Revisar usuários administrativos, acessos e permissões.
+- `PEN-033` — Revisar usuários administrativos, acessos e permissões, incluindo validação de primeiro acesso/e-mail.
 - `PEN-034` — Definir instrumentação de analytics e conversões.
 - `PEN-035` — Executar teste ponta a ponta do fluxo de compra e integrações.
 - `PEN-036` — Realizar Go/No-Go e executar checklist de cutover.
 - `PEN-037` — Operar hypercare dos primeiros 7 dias pós-go-live.
+- `PEN-038` — Confirmar passagem de bastão para suporte JET.
 
 ## Regra operacional
 
 Nunca inferir o estado (`Backlog`, `Próximo`, `Em andamento`, `Aguardando / Validar`, `Concluído`) a partir deste arquivo. Ler o board Trello antes de responder sobre estado atual.
 
-Os prefixos de fase (`[GL]`, `[PRE]`, `[LAUNCH]`, `[POST]`, `[OPT]`) são definidos no modelo operacional do Trello e no roadmap de go-live.
+A **etiqueta colorida do Trello** representa a fase de lançamento (go-live blocker, pré-lançamento, lançamento/cutover, pós-lançamento ou otimização). O estado e a data atuais também devem ser lidos do Trello.
