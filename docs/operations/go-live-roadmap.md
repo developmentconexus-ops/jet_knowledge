@@ -23,7 +23,20 @@ Color convention:
 
 A task can therefore be a red go-live blocker and simultaneously be waiting on a third party.
 
+## Canonical readiness inputs after Phase 6
+
+Readiness decisions should use the canonical layer rather than raw transcripts:
+
+- platform behavior → `docs/canonical/platform-map.md` / `knowledge-base.md`;
+- field/system authority → `docs/canonical/integration-authority-matrix.md`;
+- Metal Nobre decisions/strategy → `docs/registers/decisions.md` / `docs/canonical/strategy-playbook.md`;
+- evidence meaning → `docs/evidence/evidence-index.md`;
+- unresolved claims → `docs/registers/uncertainties.md`;
+- current execution state → Trello live.
+
 ## Phase portfolio at this checkpoint
+
+The lists below are planning classifications, not current Kanban status.
 
 ### 🔴 Go-live blockers
 
@@ -32,8 +45,6 @@ A task can therefore be a red go-live blocker and simultaneously be waiting on a
 ### 🟡 Pré-lançamento
 
 `PEN-003`, `PEN-004`, `PEN-005`, `PEN-006`, `PEN-011`, `PEN-015`, `PEN-016`, `PEN-017`, `PEN-022`, `PEN-023`, `PEN-025`, `PEN-034`, `PEN-038`, `PEN-039`.
-
-`PEN-039` is the knowledge/evidence workstream for extracting the high-value visual Pack A defined in `docs/evidence/phase-4-visual-evidence-map.md`. It is pre-launch support work, not a technical go-live blocker by itself.
 
 ### 🔵 Lançamento / cutover
 
@@ -49,7 +60,7 @@ A task can therefore be a red go-live blocker and simultaneously be waiting on a
 
 ## Target preparation calendar
 
-These dates are planning targets, not the official go-live date.
+These dates were planning targets, not the official go-live date. Trello live due dates supersede this snapshot.
 
 | Date | Target work |
 |---|---|
@@ -57,7 +68,7 @@ These dates are planning targets, not the official go-live date.
 | 26 Aug 2026 | `PEN-031` define go-live target and objective readiness criteria |
 | 27 Aug 2026 | `PEN-001` integration/category mapping validation |
 | 28 Aug 2026 | `PEN-002`, `PEN-008`, `PEN-009`, `PEN-010`, `PEN-030` — category model, image mapping, porcelain attribute/conversion and freight decision |
-| 31 Aug 2026 | `PEN-014`, `PEN-019` — sender and company/email identity data |
+| 31 Aug 2026 | `PEN-014`, `PEN-019` — sender and company/e-mail identity data |
 | 1 Sep 2026 | `PEN-005`, `PEN-018`, `PEN-022` — brand mapping, store parameters and banner specifications |
 | 2 Sep 2026 | `PEN-004`, `PEN-007`, `PEN-015`, `PEN-020`, `PEN-033` — category presentation, product-data readiness, e-mail routing, privacy and admin access |
 | 3 Sep 2026 | `PEN-003`, `PEN-016`, `PEN-017`, `PEN-038` — navigation refinement, Fale Conosco, transactional templates and support handoff verification |
@@ -68,7 +79,6 @@ These dates are planning targets, not the official go-live date.
 
 - `PEN-036` — Go/No-Go and cutover execution: derived from the official go-live chosen in `PEN-031`.
 - `PEN-037` — seven-day hypercare: derived from the actual go-live date.
-- `PEN-039` — visual evidence extraction currently has no artificial deadline; it is tracked live in Trello and should not block technical go-live unless a specific acceptance gate later depends on it.
 - green post-launch and purple optimization work has no artificial deadline unless it becomes operationally relevant.
 
 ## Go/No-Go minimum readiness model
@@ -88,4 +98,15 @@ Before a `GO`, the project should have evidence that the relevant red go-live bl
 11. end-to-end order validation;
 12. domain/publication cutover plan.
 
-`PEN-031` will turn this model into an explicit launch target and acceptance gate. `PEN-036` is the final execution gate.
+## Evidence gates added by canonicalization
+
+Go/No-Go must not accept the following shortcuts:
+
+- “the field exists in JET” as proof that JET is the source of truth;
+- historical screenshot as proof of current setting;
+- training recommendation as guaranteed platform behavior;
+- unresolved legal statement as compliance evidence;
+- App Store partner presence as final freight/payment architecture;
+- transcript-only assumption that a technical integration is implemented.
+
+`PEN-031` turns the readiness model into a target/acceptance gate. `PEN-036` is the final execution gate.
