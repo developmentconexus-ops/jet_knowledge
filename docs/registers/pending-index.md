@@ -1,51 +1,70 @@
 # Pending Index
 
-> O Trello é a autoridade do estado atual. Este arquivo é apenas o índice canônico de IDs e escopo das pendências.
+> **Trello is the authority for current status, phase label and due date.** This file is only the canonical ID/scope map for `PEN-###` work.
 
 Board: https://trello.com/b/4h9NzL77/jet-knowledge-metal-nobre
 
-- `PEN-001` — Validar mapeamento de categorias com Rodrigo/integração.
-- `PEN-002` — Fechar árvore canônica de categorias no Sankhya.
-- `PEN-003` — Confirmar menu de subcategorias por hover.
-- `PEN-004` — Definir categorias principais visíveis e opção “Ver todos”.
-- `PEN-005` — Validar agrupamento de marcas na integração.
-- `PEN-006` — Preparar marcas na JET.
-- `PEN-007` — Concluir enriquecimento de dados de produto.
-- `PEN-008` — Validar mapeamento de imagens com Rodrigo.
-- `PEN-009` — Validar integração do Atributo Único m²/caixa.
-- `PEN-010` — Confirmar conversão m²/caixa no retorno ao Sankhya.
-- `PEN-011` — Revisar layout da calculadora de porcelanato.
-- `PEN-012` — Definir famílias para Produto Semelhante.
-- `PEN-013` — Confirmar automação de “Quem comprou, comprou também”.
-- `PEN-014` — Configurar remetente padrão antes da publicação.
-- `PEN-015` — Definir remetentes e cópias por evento de e-mail.
-- `PEN-016` — Habilitar e configurar Fale Conosco.
-- `PEN-017` — Revisar templates transacionais de e-mail.
-- `PEN-018` — Fechar parametrizações de Editar Dados da Loja.
-- `PEN-019` — Validar dados cadastrais e logo de e-mail.
-- `PEN-020` — Revisar e ativar Política de Privacidade.
-- `PEN-021` — Conectar redes sociais e Instagram real.
-- `PEN-022` — Confirmar dimensões oficiais dos banners.
-- `PEN-023` — Organizar banners existentes.
-- `PEN-024` — Migrar/revisar páginas institucionais.
-- `PEN-025` — Executar SEO por prioridade.
-- `PEN-026` — Limpar produtos de teste e preservar grupos fixos da home.
-- `PEN-027` — Criar processo para leads de Produtos Aguardados.
-- `PEN-028` — Estruturar de/para de categorias para marketplace/Google.
-- `PEN-029` — Estudar e definir gateway de pagamento; reunião em 25/08/2026 às 09:30 (BRT).
-- `PEN-030` — Estudar e definir módulo/arquitetura de frete.
-- `PEN-031` — Fechar data-alvo de go-live e critérios de readiness.
-- `PEN-032` — Planejar publicação, domínio/DNS e cutover.
-- `PEN-033` — Revisar usuários administrativos, acessos e permissões, incluindo validação de primeiro acesso/e-mail.
-- `PEN-034` — Definir instrumentação de analytics e conversões.
-- `PEN-035` — Executar teste ponta a ponta do fluxo de compra e integrações.
-- `PEN-036` — Realizar Go/No-Go e executar checklist de cutover.
-- `PEN-037` — Operar hypercare dos primeiros 7 dias pós-go-live.
-- `PEN-038` — Confirmar passagem de bastão para suporte JET.
-- `PEN-039` — Extrair Pacote A de evidências visuais dos treinamentos conforme `docs/evidence/phase-4-visual-evidence-map.md`.
+## Catalog, categories and product data
 
-## Regra operacional
+| ID | Scope | Canonical links |
+|---|---|---|
+| `PEN-001` | Validate category mapping with Rodrigo/integration, including unwanted codes and update/overwrite behavior. | `JET-KB-009`–`012`; Integration Matrix |
+| `PEN-002` | Close the canonical category tree in Sankhya for JET and future channels. | `JET-KB-009`, `JET-KB-011`; Integration Matrix |
+| `PEN-003` | Confirm/implement subcategory navigation by hover. | `MN-DEC-003`; `STR-003` |
+| `PEN-004` | Define top categories visible in primary navigation and whether/how `Ver todos` is exposed. | `STR-004` |
+| `PEN-005` | Validate upstream/integration brand consolidation such as Deca Metal / Deca Louça → Deca. | Integration Matrix; corrected `MN-DEC-009` |
+| `PEN-006` | Prepare JET brand merchandising fields/presentation. | `STR-005`; Integration Matrix |
+| `PEN-007` | Complete product-data enrichment flowing toward Sankhya → JET. | `JET-KB-013`–`015`; `STR-006` |
+| `PEN-008` | Validate image mapping/order between upstream/Sankhya and JET main/alternative/multifoto roles. | `JET-KB-019`, `JET-KB-020`; `MOD2-VIS-004` |
+| `PEN-009` | Validate whether Atributo Único m²/box can be created/updated from Sankhya/integration rather than manually. | `JET-KB-037`, `JET-KB-038`; `UNC-003` boundary |
+| `PEN-010` | Confirm m²/box conversion/return behavior in Sankhya/integration. | `JET-KB-040`; `UNC-003` |
+| `PEN-011` | Review porcelain-calculator layout/clarity after functional behavior is validated. | `STR-010`; `MOD2-VIS-007B` |
+| `PEN-012` | Define Product Similar families and customer-facing dimension (voltage/color/power/etc.). | `JET-KB-025`–`027`; `STR-002` |
+| `PEN-013` | Confirm current automation state of “Quem comprou, comprou também”. | `JET-KB-029`; `UNC-002` |
 
-Nunca inferir o estado (`Backlog`, `Próximo`, `Em andamento`, `Aguardando / Validar`, `Concluído`) a partir deste arquivo. Ler o board Trello antes de responder sobre estado atual.
+## E-mail, access, store configuration and compliance
 
-A **etiqueta colorida do Trello** representa a fase de lançamento (go-live blocker, pré-lançamento, lançamento/cutover, pós-lançamento ou otimização). O estado e a data atuais também devem ser lidos do Trello.
+| ID | Scope | Canonical links |
+|---|---|---|
+| `PEN-014` | Configure and validate at least one default transactional sender before publication. | `JET-KB-049`; `MOD1-VIS-003` |
+| `PEN-015` | Define sender/copy routing by transactional event and operational need. | `STR-020`; `JET-KB-049` |
+| `PEN-016` | Enable/configure Fale Conosco and alert recipients/frequency as applicable. | `JET-KB-050` |
+| `PEN-017` | Review transactional e-mail body, subject, tags and communication. | `JET-KB-048`; `STR-021` |
+| `PEN-018` | Close current `Editar Dados da Loja` parametrizations, including live verification that automatic sold-out flag updating is `Sim`. | `JET-KB-043`, `JET-KB-051`; Phase 5 |
+| `PEN-019` | Validate company registration data and e-mail logo/identity used in automated communications. | Platform Map |
+| `PEN-020` | Review/publish privacy policy through the correct JET flow; validate legal content separately. | `JET-KB-056`, `JET-KB-057`; `UNC-006` |
+| `PEN-021` | Connect real social-network/Instagram accounts. | `JET-KB-058` |
+
+## Content, storefront and acquisition
+
+| ID | Scope | Canonical links |
+|---|---|---|
+| `PEN-022` | Confirm official/current dimensions for banner types before production at scale. | `JET-KB-061`; Evidence Map Pack B |
+| `PEN-023` | Organize existing banners, names, assets, links and layout placement. | `JET-KB-061`; `STR-019` |
+| `PEN-024` | Migrate/review institutional content into JET custom pages, using HTML/source where useful. | `JET-KB-063` |
+| `PEN-025` | Execute SEO in the established priority order. | `JET-KB-052`, `JET-KB-053`; `STR-016`, `STR-017` |
+| `PEN-026` | Remove test content from product groups while preserving layout-bound group IDs. | `JET-KB-030`, `JET-KB-031`; `JET-RULE-005` |
+| `PEN-027` | Define operational handling for Produtos Aguardados / `Avise-me` leads. | `JET-KB-045`, `JET-KB-046`; `STR-012`, `STR-013` |
+| `PEN-028` | Structure future category de/para for AnyMarket/marketplaces and Google/XML catalog. | Platform Map; Integration Matrix |
+
+## Payment, freight and launch readiness
+
+| ID | Scope | Canonical links |
+|---|---|---|
+| `PEN-029` | Study and decide the payment gateway/PSP architecture: JET integration, fees, Pix/card, installments, settlement, reconciliation, antifraud/chargeback and operational constraints. | `JET-KB-069`; `STR-023` |
+| `PEN-030` | Study and decide full freight architecture: checkout rating, services/carriers, coverage, deadlines, rules, JET/Sankhya integration, tracking and operational exceptions. | `JET-KB-068`; `STR-022` |
+| `PEN-031` | Define target go-live and objective readiness/Go-No-Go criteria using payment/freight viability and other blockers. | `STR-024`; Platform Map |
+| `PEN-032` | Plan publication, domain/DNS, cutover window, dependencies, post-publish validation and contingency. | `JET-KB-055`; launch layer |
+| `PEN-033` | Review admin users, least-privilege access and first-access/e-mail behavior. | `JET-KB-004`–`006`; `UNC-008`; `MOD1-VIS-001/002` |
+| `PEN-034` | Define launch analytics/conversion instrumentation and validate events. | Planning-derived readiness work; not established by training. |
+| `PEN-035` | Execute end-to-end purchase/integration tests with evidence. | Critical for `UNC-003`, payment/freight/integration validation. |
+| `PEN-036` | Perform evidence-based Go/No-Go and execute cutover if GO. | `STR-024` |
+| `PEN-037` | Operate first-seven-day post-go-live hypercare across checkout, integrations and customer-impact signals. | Planning-derived operations |
+| `PEN-038` | Confirm current JET support channel, handoff, owners and escalation route. | `JET-KB-070`; `UNC-009` |
+| `PEN-039` | Extract Pack A targeted visual evidence from the training videos according to the Phase 4 map. | `docs/evidence/evidence-index.md`; Phase 5 validation |
+
+## Operational rule
+
+Never infer `Backlog`, `Próximo`, `Em andamento`, `Aguardando / Validar`, `Concluído`, phase color or due date from this file. Read Trello live before reporting current state.
+
+This index may retain IDs after their work is completed because the IDs are part of the canonical traceability graph.
