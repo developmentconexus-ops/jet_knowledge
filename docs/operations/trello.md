@@ -6,6 +6,15 @@ Board: https://trello.com/b/4h9NzL77/jet-knowledge-metal-nobre
 
 O Trello é a fonte de verdade do estado operacional das pendências `PEN-###`.
 
+Isso inclui:
+
+- coluna/status atual;
+- etiqueta de fase atualmente vinculada;
+- due date vigente;
+- checklist operacional atual.
+
+O GitHub é a autoridade para conhecimento canônico, decisões, incertezas, significado das evidências, regras de integração e escopo canônico dos IDs `PEN-###`.
+
 ## Colunas — estado atual
 
 - `Backlog` — identificado, mas ainda não priorizado para execução imediata.
@@ -37,6 +46,8 @@ Os nomes e cores acima foram verificados diretamente no board. O Trello, e não 
 7. Uma etiqueta vermelha não significa automaticamente `Próximo`: um blocker pode estar em `Aguardando / Validar`, `Em andamento` ou `Backlog`. Fase e estado são dimensões independentes.
 8. Itens verdes e roxos não devem ocupar `Próximo` antes da hora sem uma razão explícita.
 9. Se o usuário alterar cartão, coluna, etiqueta ou data diretamente no Trello, a próxima leitura do board prevalece sobre qualquer snapshot anterior desta conversa ou do GitHub.
+10. Antes de criar novo `PEN-###`, pesquisar Trello e `docs/registers/pending-index.md` para evitar duplicação semântica.
+11. Um ID pode permanecer no índice canônico depois de concluído, pois continua fazendo parte da rastreabilidade histórica.
 
 ## Datas e compromissos
 
@@ -47,6 +58,18 @@ Os nomes e cores acima foram verificados diretamente no board. O Trello, e não 
 5. A data oficial de go-live não deve ser inferida das datas-alvo de preparação. Ela será definida explicitamente em `PEN-031`.
 6. `PEN-036` (Go/No-Go) e `PEN-037` (hypercare) recebem datas derivadas somente após a definição do go-live.
 
+## Roteamento após a Fase 6
+
+A camada canônica v1 define o seguinte caminho de consulta:
+
+- “O que a JET faz / quais superfícies existem?” → `docs/canonical/platform-map.md`
+- “Qual é a afirmação canônica e sua classificação?” → `docs/canonical/knowledge-base.md`
+- “Quem manda neste campo / onde posso escrever?” → `docs/canonical/integration-authority-matrix.md`
+- “O que a Metal Nobre decidiu, prefere ou recebeu como orientação?” → `docs/registers/decisions.md` e `docs/canonical/strategy-playbook.md`
+- “O que essa captura realmente prova?” → `docs/evidence/evidence-index.md`
+- “O que ainda é incerto?” → `docs/registers/uncertainties.md`
+- “Qual é o estado atual / prazo / coluna?” → **ler Trello ao vivo**
+
 ## Integração conceitual
 
-`PEN-###` é a chave de correlação entre GitHub e Trello. O board continua sendo a fonte de status, fase e datas atuais.
+`PEN-###` é a chave de correlação entre GitHub e Trello. O board continua sendo a fonte de status, fase e datas atuais. A camada canônica explica o significado e a autoridade do trabalho; não tenta congelar seu estado operacional.
