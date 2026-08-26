@@ -82,17 +82,32 @@ Cada item deverá carregar, quando aplicável:
 6. Afirmações jurídicas ou regulatórias do treinamento exigem validação externa antes de virar regra de compliance.
 7. Procedimentos críticos para futuras ITs exigem evidência visual quando o transcript não captura suficientemente a interface.
 
-## Fluxo aprovado
+## Fluxo aprovado e estado
 
-1. Inventário integral MOD1 + MOD2.
-2. Atomização e classificação.
-3. Reconciliação entre módulos.
-4. Visual Evidence Map.
-5. Validação transcript ↔ tela.
-6. Construção da camada canônica: Platform Map, Knowledge Base, Pending/Decision Registers, Integration Matrix, Strategy Playbook e Evidence Index.
+1. Inventário integral MOD1 + MOD2. — **CONCLUÍDO**
+2. Atomização e classificação. — **CONCLUÍDO na camada canônica v1**
+3. Reconciliação entre módulos. — **CONCLUÍDO**
+4. Visual Evidence Map. — **CONCLUÍDO**
+5. Validação transcript ↔ tela. — **CONCLUÍDO**
+6. Construção da camada canônica: Platform Map, Knowledge Base, Pending/Decision Registers, Integration Matrix, Strategy Playbook e Evidence Index. — **CONCLUÍDO (v1)**
 7. Futuramente: POs/ITs.
 8. Futuramente: RAG/knowledge para agentes.
 9. Futuramente: arquitetura mínima do time de agentes.
+
+## Camada canônica v1
+
+- `docs/canonical/platform-map.md` — mapa humano das capacidades e fronteiras.
+- `docs/canonical/knowledge-base.md` — ledger canônico atomizado/classificado.
+- `docs/canonical/integration-authority-matrix.md` — autoridade e política segura de escrita por dado/capacidade.
+- `docs/canonical/strategy-playbook.md` — decisões, intenções e guidance separados de fatos de plataforma.
+- `docs/evidence/evidence-index.md` — o que cada evidência visual validada realmente prova.
+- `docs/registers/decisions.md` — decisões/classificações históricas normalizadas.
+- `docs/registers/uncertainties.md` — lacunas e caminho exigido para resolução.
+- `docs/registers/pending-index.md` — índice canônico de escopo das pendências; status vivo continua no Trello.
+
+## Regra para as próximas etapas
+
+PO/IT, RAG e agentes devem consumir a camada canônica v1, **não** os transcripts crus como fonte operacional direta. Quando houver conflito com estado vivo ou nova evidência, atualizar a camada canônica preservando proveniência/supersessão.
 
 ## Board operacional
 
