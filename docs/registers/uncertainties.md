@@ -1,20 +1,45 @@
 # Uncertainty Register
 
-Itens que NÃO devem ser tratados como fatos confirmados por humanos, documentos futuros ou agentes.
+## Purpose
 
-- `UNC-001` — Frequência de atualização do sitemap: o instrutor citou 12 ou 24 horas sem confirmar.
-- `UNC-002` — Automação de “Quem comprou, comprou também”: o instrutor disse precisar validar; naquele momento, afirmou ser 100% manual.
-- `UNC-003` — Conversão m²/caixa já implementada ou ainda a implementar por Rodrigo: não confirmada.
-- `UNC-004` — Existência/mapeamento de cross docking no Sankhya: o instrutor demonstrou incerteza.
-- `UNC-005` — Exemplos sobre concorrentes/produtos feitos explicitamente como chute/opinião não são fatos.
-- `UNC-006` — Afirmações jurídicas/LGPD feitas no treinamento exigem validação jurídica externa antes de virarem regras de compliance.
-- `UNC-007` — Afirmações comparativas sobre modelos de IA feitas pelo instrutor são opinião do treinamento, não fato técnico canônico.
-- `UNC-008` — Comportamento exato de primeiro acesso/e-mail antes e depois da publicação: o treinamento usa `Recuperar Senha` enquanto a loja está em projeto, mas também exige remetente padrão antes da publicação. A fronteira entre infraestrutura de disparo, senha temporária e remetente não ficou tecnicamente demonstrada.
-- `UNC-009` — Estado atual da passagem de bastão para o suporte JET: no Módulo 1 ela ainda não havia ocorrido; nenhum transcript posterior confirma conclusão. Ver `PEN-038`.
-- `UNC-010` — Estado atual de funcionalidades descritas como “sendo descontinuadas”, especialmente Comentários de Clientes sobre o Produto: a fala é temporal e deve ser revalidada antes de aparecer como fato atual em manual/agente.
+Items here must **not** be treated as confirmed facts by operators, future documents, RAG retrieval or agents.
 
-## Regra de consumo
+Resolution must come from the named evidence path; inference is not an acceptable substitute.
 
-1. Agentes e documentos devem preferir `UNKNOWN`/`REQUIRES_EXTERNAL_VERIFICATION` a completar lacunas por inferência.
-2. Uma fala temporal (“hoje”, “está sendo descontinuado”, “ainda não”) não deve ser automaticamente promovida a fato atual permanente.
-3. Quando uma incerteza for resolvida, preservar o ID e registrar evidência/data de resolução em vez de apagar silenciosamente o histórico.
+## Register
+
+| ID | Uncertainty | Required resolution path | Consumers / related |
+|---|---|---|---|
+| `UNC-001` | Sitemap refresh frequency: trainer cited 12 or 24 hours without confirming. | Current JET documentation/support or direct observed behavior. | `JET-KB-054`; future SEO/technical docs |
+| `UNC-002` | Automation of “Quem comprou, comprou também”: trainer needed to validate and said it was 100% manual at that time. | Current JET capability validation before claiming automation. | `JET-KB-029`; `PEN-013` |
+| `UNC-003` | Whether m²/box conversion/return handling is already implemented by Rodrigo/integration. | Integration evidence + end-to-end order/inventory test. | `JET-KB-040`; `PEN-010`, `PEN-035` |
+| `UNC-004` | Whether/how cross-docking is represented and mapped in Sankhya. | Rodrigo/integration mapping evidence. | `JET-KB-018`; Integration Matrix |
+| `UNC-005` | Competitor/product examples explicitly made as guesses/opinions by trainer. | Do not resolve unless the example becomes operationally relevant; then research the specific claim independently. | Prevents accidental fact promotion. |
+| `UNC-006` | Legal/LGPD statements made verbally during training. | External legal/compliance validation before becoming policy, PO/IT rule or agent guardrail. | `JET-KB-057`; `PEN-020`, access/privacy docs |
+| `UNC-007` | Comparative opinions about AI models made by trainer. | Not needed for JET operations; exclude from canonical technical facts. | Agent/RAG hygiene |
+| `UNC-008` | Exact first-access/e-mail behavior before vs after publication, including temporary password, `Recuperar Senha`, dispatch infrastructure and sender relationship. | Current JET behavior/support validation in project context. | `JET-KB-006`; `PEN-033`, `PEN-014` |
+| `UNC-009` | Current JET support handoff state. Training only proves that handoff had not yet completed at that historical moment. | Confirm current support channel, owners and escalation route. | `JET-KB-070`; `PEN-038` |
+| `UNC-010` | Current status of features described as “being discontinued”, especially customer product comments. | Revalidate current JET feature availability/status before documentation or agent use. | `JET-KB-071` |
+
+## Resolution states
+
+When an uncertainty is resolved, preserve the ID and append a resolution record containing:
+
+```yaml
+uncertainty_id: UNC-003
+resolved_at:
+resolution:
+evidence:
+impacted_knowledge_ids:
+impacted_pending_ids:
+```
+
+Do not delete the original uncertainty text.
+
+## Consumption guardrails
+
+1. Prefer `UNKNOWN` / `REQUIRES_EXTERNAL_VERIFICATION` over completing a gap by inference.
+2. Temporal speech such as “today”, “still”, “being discontinued” or “not yet” is not a permanent current fact.
+3. A screenshot of a field does not resolve integration implementation or field authority.
+4. A training recommendation does not resolve an uncertainty about current platform behavior.
+5. Legal uncertainty is resolved externally, not through more screenshots of the JET UI.
