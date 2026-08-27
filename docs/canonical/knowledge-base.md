@@ -142,8 +142,8 @@ The ledger is intentionally **atomic enough to retrieve safely**, but not one-re
 | `JET-KB-065` | `PLATFORM_FACT` | JET uses separated integration queues by domain (examples shown include brand, product, stock and price); active queues are fed for integrator consumption. | JET / `CONFIRMED` | CRITICAL | MOD1 31:15–32:09; `MOD1-VIS-004` |
 | `JET-KB-066` | `RISK_GUARDRAIL` | Queue load/cleanup and related technical operations should be treated as privileged and performed with the integrator/JET support, not as routine operator actions. | JET + INTEGRATION / `CONFIRMED` | CRITICAL | `JET-RULE-004` |
 | `JET-KB-067` | `PLATFORM_FACT` | JET App Store/ecosystem demonstrated specialized partner integrations, including freight examples; partner presence proves integration capability only. | JET ecosystem / `CONFIRMED` at training time | LOW | MOD1 01:12:44–01:14:34 |
-| `JET-KB-068` | `OPEN_QUESTION` | Final Metal Nobre freight architecture is not defined by the training and remains separate decision work. | UNKNOWN / unresolved | CRITICAL | `PEN-030` |
-| `JET-KB-069` | `OPEN_QUESTION` | Final Metal Nobre gateway/payment architecture is not defined by the training and remains separate decision work. | UNKNOWN / unresolved | CRITICAL | `PEN-029` |
+| `JET-KB-068` | `METAL_NOBRE_DECISION` | Metal Nobre selected **Frenet** as the freight hub for the JET ecommerce after the freight study. Provider selection is decided; integration/configuration and end-to-end operational validation remain open. | METAL_NOBRE / `METAL_NOBRE_DECISION` | CRITICAL | `MN-DEC-012`; `STR-026`; `PEN-043`; `PEN-035` |
+| `JET-KB-069` | `METAL_NOBRE_DECISION` | Metal Nobre selected **Pagar.me** as the gateway/PSP for the JET ecommerce and began the contracting process. Provider selection is decided; integration/configuration and end-to-end payment validation remain open. | METAL_NOBRE / `METAL_NOBRE_DECISION` | CRITICAL | `MN-DEC-011`; `STR-025`; `PEN-042`; `PEN-035` |
 | `JET-KB-070` | `CURRENT_STATE` | At MOD1 training time, support handoff to the normal JET support route had not yet been confirmed complete; current support route must be revalidated. | UNKNOWN current / historical `CONFIRMED` | MEDIUM | `UNC-009`; `PEN-038` |
 | `JET-KB-071` | `DEPRECATED/EVOLVING_FEATURE` | Trainer stated that customer product comments were being discontinued at training time; this is a temporal statement and is not safe as a permanent current fact. | JET historical / requires current revalidation | MEDIUM | `UNC-010` |
 
@@ -155,6 +155,7 @@ Notably:
 
 - `MN-DEC-009` is **not** a final brand-layout decision. It records only the intent to preserve brand navigation, pending implementation/validation.
 - `MN-DEC-010` records that encomenda/cross-docking is not an immediate implementation focus; it does not remove JET capability or future use.
+- `MN-DEC-011` / `MN-DEC-012` close provider selection for payment/freight only; they do not prove the integrations are configured or accepted.
 
 ## Live-state boundary
 
