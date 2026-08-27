@@ -4,7 +4,7 @@
 
 Determine which operational documents can be drafted from the canonical JET knowledge layer **without converting unresolved implementation, current-state or business decisions into false procedure**.
 
-This is a readiness gate, not a new task backlog. Existing `PEN-###` and `UNC-###` items remain the owners of unresolved work.
+This is a readiness gate, not a new task backlog and not a go-live readiness gate. Existing `PEN-###` and `UNC-###` items remain the owners of unresolved work, and Trello remains authoritative for live status.
 
 ## Readiness states
 
@@ -69,6 +69,8 @@ A document can move from draft to operational/ISO-controlled release only when:
 5. screenshots/UI paths are labeled with interface context when they may drift;
 6. legal statements are externally validated when the document contains compliance requirements;
 7. any related live blocker that changes the procedure has been resolved or explicitly accepted.
+
+A document being `READY_FOR_DRAFT` does **not** close a `PEN-###`, satisfy go-live readiness or prove the live implementation is correct.
 
 ## Phase 7 next increment
 
