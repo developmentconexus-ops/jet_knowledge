@@ -58,6 +58,34 @@ The highest-value low-risk first drafts are:
 
 Do **not** start with a giant all-in-one ecommerce PO. That would force unresolved payment, freight, catalog, integration and launch assumptions into one document.
 
+## Knowledge-first drafts created
+
+The two `READY_FOR_DRAFT` items have now been converted into operational knowledge drafts:
+
+- `docs/iso/drafts/it-bulk-update-jet-managed-product-fields.md`;
+- `docs/iso/drafts/it-product-group-maintenance.md`.
+
+These drafts deliberately prioritize **knowledge completeness over ISO formatting**. They include authority boundaries, known procedure, prohibited actions, failure handling, post-execution verification, provenance and targeted questions for the later training rewatch.
+
+They are not yet assigned an official Metal Nobre IT code, owner, approver, review cadence or controlled-document header because those elements were not established by the analyzed sources.
+
+## Strategic second-viewing audit
+
+The planned rewatch has also been prepared as a delta-oriented audit:
+
+- `docs/research/strategic-rewatch-checklist.md`.
+
+The rewatch should not re-transcribe the modules. It should look specifically for:
+
+- new knowledge;
+- corrections;
+- stronger evidence;
+- missing procedure steps;
+- missing guardrails;
+- troubleshooting patterns;
+- decision-classification fixes;
+- uncertainties that the historical training can clarify versus questions that still require current/external validation.
+
 ## Release rule
 
 A document can move from draft to operational/ISO-controlled release only when:
@@ -74,13 +102,12 @@ A document being `READY_FOR_DRAFT` does **not** close a `PEN-###`, satisfy go-li
 
 ## Phase 7 next increment
 
-Draft the two `READY_FOR_DRAFT` ITs first:
+Continue capturing knowledge-first drafts only where the stable parts add value, while keeping their release blockers explicit.
 
-- bulk update of JET-managed product fields;
-- product-group maintenance.
+Do not turn blocked topics into prescriptive operating procedures merely to make the documentation look complete.
 
-Then draft blocked-by-current-state ITs only as controlled drafts, without pretending they are ready for operational release.
+When the project reaches the planned strategic rewatch, reconcile only the deltas back into the canonical layer and these drafts.
 
 ## Status
 
-**READINESS GATE COMPLETE.** No PO/IT operational release has been authorized by this gate itself.
+**READINESS GATE COMPLETE; KNOWLEDGE-FIRST DRAFTING STARTED.** No PO/IT operational release has been authorized by this gate itself.
