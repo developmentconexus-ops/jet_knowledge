@@ -35,7 +35,7 @@ It reflects the **current demonstrated training/integration model**, not a unive
 | Product price | `SANKHYA` | Yes through some JET controls | Change upstream; avoid JET-local divergence. | `JET-RULE-002` |
 | Product category association | `SANKHYA` | Yes | Maintain upstream in current model. | `PEN-001`, `PEN-002` |
 | Product weight | `SANKHYA` / upstream | Yes | Populate upstream; package weight participates in freight logic. | `PEN-007` |
-| Product dimensions | `SANKHYA` / upstream | Yes | Populate package dimensions upstream; validate completeness before freight/E2E readiness. | `PEN-007`, `PEN-030`, `PEN-035` |
+| Product dimensions | `SANKHYA` / upstream | Yes | Populate package dimensions upstream; validate completeness before freight/E2E readiness. | `PEN-007`, `PEN-043`, `PEN-035` |
 | Product descriptions | `SANKHYA` / upstream | Yes | Current intended flow is upstream → JET. | `PEN-007` |
 | Main product image | `SANKHYA` / upstream + `INTEGRATION` mapping | Yes | Upstream order/mapping must land correctly as main image. | `PEN-008` |
 | Alternative image | `SANKHYA` / upstream + `INTEGRATION` mapping | Yes | Validate how image order maps to hover-role alternative image. | `PEN-008` |
@@ -72,8 +72,8 @@ It reflects the **current demonstrated training/integration model**, not a unive
 | Custom institutional pages | `JET` | Yes | Manage/migrate content in JET; HTML source may be used. | `PEN-024` |
 | Marketplace taxonomy/de-para | `INTEGRATION` / AnyMarket path | n/a | Future mapping work; do not assume JET category tree alone satisfies every marketplace. | `PEN-028` |
 | Google/XML catalog categorization | `INTEGRATION` / external feed path | n/a | Future configuration; training establishes context/capability only. | `PEN-028` |
-| Freight provider/rating architecture | `UNKNOWN` | n/a | Must be decided as full checkout + operational architecture, not inferred from App Store partner availability. | `PEN-030` |
-| Payment gateway/PSP | `UNKNOWN` | n/a | Must be explicitly decided from current payment work. | `PEN-029` |
+| Freight provider/rating architecture | `METAL_NOBRE` provider decision = `FRENET`; implementation via `JET`/`INTEGRATION` | n/a | Frenet is the selected hub, but provider choice does not prove services, rules, rating, tracking or exception handling are configured. Validate the actual integration before go-live. | `MN-DEC-012`, `PEN-043`, `PEN-035` |
+| Payment gateway/PSP | `METAL_NOBRE` provider decision = `PAGAR.ME`; implementation via `JET`/`INTEGRATION` | n/a | Pagar.me is selected and contracting has started, but provider choice does not prove payment methods/status flows/reconciliation are configured. Validate the actual integration before go-live. | `MN-DEC-011`, `PEN-042`, `PEN-035` |
 
 ## High-risk write policy for future agents
 
