@@ -67,9 +67,11 @@ Platform facts belong in `knowledge-base.md`; live task status belongs in Trello
 
 | Strategy ID | Class | Play | Why / source basis | Operational boundary |
 |---|---|---|---|---|
-| `STR-022` | `DECISION` | Do not select freight architecture merely because a partner appears in the JET App Store. | Training proves ecosystem options, not fit for Metal Nobre. | Compare full operational architecture in `PEN-030`. |
-| `STR-023` | `DECISION` | Do not infer the payment gateway from training; decide it through current payment work. | Transcripts do not close gateway choice. | `PEN-029`. |
+| `STR-022` | `DECISION` | Do not select freight architecture merely because a partner appears in the JET App Store. | Training proves ecosystem options, not fit for Metal Nobre. | Historical decision principle; provider study was closed in `PEN-030`. |
+| `STR-023` | `DECISION` | Do not infer the payment gateway from training; decide it through current payment work. | Transcripts do not close gateway choice. | Historical decision principle; provider study was closed in `PEN-029`. |
 | `STR-024` | `DECISION` | Treat go-live as evidence-based readiness, not “looks ready”. | Current readiness plan requires payment, freight, data, integrations, access, content and E2E evidence. | `PEN-031`–`PEN-036`. |
+| `STR-025` | `DECISION` | Use **Pagar.me** as the gateway/PSP for the JET ecommerce. | Explicit provider decision after the payment study; contracting process has started. | `MN-DEC-011`; implementation/validation remains `PEN-042` and E2E proof `PEN-035`. |
+| `STR-026` | `DECISION` | Use **Frenet** as the freight hub for the JET ecommerce. | Explicit provider/hub decision after the freight study. | `MN-DEC-012`; implementation/validation remains `PEN-043` and E2E proof `PEN-035`. |
 
 ## Strategy that must NOT be promoted
 
