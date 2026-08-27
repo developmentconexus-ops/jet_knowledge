@@ -90,7 +90,7 @@ Cada item deverá carregar, quando aplicável:
 4. Visual Evidence Map. — **CONCLUÍDO**
 5. Validação transcript ↔ tela. — **CONCLUÍDO**
 6. Construção da camada canônica: Platform Map, Knowledge Base, Pending/Decision Registers, Integration Matrix, Strategy Playbook e Evidence Index. — **CONCLUÍDO (v1)**
-7. POs/ITs. — **READINESS GATE CONCLUÍDO; redação/release seguirá somente onde a base está suficientemente decidida/validada**
+7. POs/ITs. — **READINESS GATE CONCLUÍDO; knowledge-first drafting EM ANDAMENTO; release seguirá somente onde a base está suficientemente decidida/validada**
 8. Futuramente: RAG/knowledge para agentes.
 9. Futuramente: arquitetura mínima do time de agentes.
 
@@ -105,7 +105,7 @@ Cada item deverá carregar, quando aplicável:
 - `docs/registers/uncertainties.md` — lacunas e caminho exigido para resolução.
 - `docs/registers/pending-index.md` — índice canônico de escopo das pendências; status vivo continua no Trello.
 
-## Phase 7 — document readiness
+## Phase 7 — document readiness and knowledge-first drafts
 
 `docs/iso/phase-7-document-readiness.md` classifica cada candidato a PO/IT em:
 
@@ -114,13 +114,24 @@ Cada item deverá carregar, quando aplicável:
 - `BLOCKED`;
 - `DEFER`.
 
-O gate não cria um segundo backlog: `PEN-###` e `UNC-###` existentes continuam donos das lacunas. Os dois primeiros ITs recomendados para redação são atualização massiva de campos JET via planilha e manutenção de grupos de produtos, pois possuem procedimento/evidência/guardrails suficientes sem depender de decisão operacional ainda aberta.
+O gate não cria um segundo backlog: `PEN-###` e `UNC-###` existentes continuam donos das lacunas.
+
+### Rascunhos knowledge-first já criados
+
+- `docs/iso/drafts/it-bulk-update-jet-managed-product-fields.md` — atualização massiva via planilha, com autoridade, guardrails, erro/verificação e pontos de reassistida;
+- `docs/iso/drafts/it-product-group-maintenance.md` — manutenção/criação de grupos, preservando IDs vinculados ao layout;
+- `docs/iso/drafts/release-blocked-procedural-knowledge.md` — núcleo procedural estável de usuários/acessos, e-mails, filas, Produto Semelhante, Avise-me, banners, páginas e publicação de privacidade, mantendo blockers explícitos;
+- `docs/research/strategic-rewatch-checklist.md` — reassistida futura orientada por delta contra a base canônica, sem retranscrever as aulas.
+
+A prioridade nesta etapa é **não perder conhecimento válido só porque o documento ISO final ainda não está formatado ou liberado**. Ao mesmo tempo, nenhum gap de integração, estado atual, responsabilidade ou jurídico deve ser preenchido por inferência.
 
 ## Regra para as próximas etapas
 
 PO/IT, RAG e agentes devem consumir a camada canônica v1, **não** os transcripts crus como fonte operacional direta. Quando houver conflito com estado vivo ou nova evidência, atualizar a camada canônica preservando proveniência/supersessão.
 
 Um PO/IT não deve ser liberado como instrução operacional se o texto precisar preencher por inferência um `UNKNOWN`, `UNC-###`, mapeamento de autoridade ou valor atual de go-live ainda não validado.
+
+A reassistida estratégica deve produzir **deltas** — conhecimento novo, correções, evidência mais forte, passos/guardrails/troubleshooting faltantes — e reconciliá-los com os IDs existentes.
 
 ## Board operacional
 
