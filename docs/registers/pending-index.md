@@ -63,6 +63,10 @@ Board: https://trello.com/b/4h9NzL77/jet-knowledge-metal-nobre
 | `PEN-038` | Confirm current JET support channel, handoff, owners and escalation route. | `JET-KB-070`; `UNC-009` |
 | `PEN-039` | Extract Pack A targeted visual evidence from the training videos according to the Phase 4 map. | `docs/evidence/evidence-index.md`; Phase 5 validation |
 
+## Document-readiness linkage
+
+`docs/iso/phase-7-document-readiness.md` maps the existing `PEN-###` / `UNC-###` gaps to candidate PO/IT release readiness. It does **not** create a second backlog or change live status.
+
 ## Operational rule
 
 Never infer `Backlog`, `Próximo`, `Em andamento`, `Aguardando / Validar`, `Concluído`, phase color or due date from this file. Read Trello live before reporting current state.
