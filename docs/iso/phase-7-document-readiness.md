@@ -80,3 +80,7 @@ Draft the two `READY_FOR_DRAFT` ITs first:
 - product-group maintenance.
 
 Then draft blocked-by-current-state ITs only as controlled drafts, without pretending they are ready for operational release.
+
+## Status
+
+**READINESS GATE COMPLETE.** No PO/IT operational release has been authorized by this gate itself.
