@@ -28,6 +28,8 @@ These entries must not be confused with universal JET platform facts. Current ex
 | `MN-DEC-008` | `DECISION` | Conduct SEO internally at this stage rather than engage an agency. | MOD1 SEO discussion | Execution/prioritization in `PEN-025`. |
 | `MN-DEC-009` | `CORRECTED_NOT_FINAL` | Preserve the intent to support meaningful brand navigation/shopping, but do **not** treat the final JET brand layout/presentation as approved or completed. | MOD2 36:45–41:19; corrected in Phase 3 | Brand grouping/config remains `PEN-005`/`PEN-006`. ID preserved for historical traceability. |
 | `MN-DEC-010` | `DECISION` | Products handled by encomenda/cross-docking are not an immediate focus of the current rollout. | MOD2 product discussion | Does not remove future capability; cross-docking authority remains `UNC-004`. |
+| `MN-DEC-011` | `DECISION` | Use **Pagar.me** as the Metal Nobre gateway/PSP for the JET ecommerce. The contracting process has started. | Explicit project update on 2026-08-27 after payment study/review. | Provider decision closes `PEN-029`; implementation and functional validation remain `PEN-042` and feed `PEN-035`. |
+| `MN-DEC-012` | `DECISION` | Use **Frenet** as the Metal Nobre freight hub for the JET ecommerce. | Explicit project update on 2026-08-27 after freight study/review. | Provider/hub decision closes `PEN-030`; integration and operational validation remain `PEN-043` and feed `PEN-035`. |
 
 ## Supersession rule
 
