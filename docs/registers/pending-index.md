@@ -51,8 +51,8 @@ Board: https://trello.com/b/4h9NzL77/jet-knowledge-metal-nobre
 
 | ID | Scope | Canonical links |
 |---|---|---|
-| `PEN-029` | Study and decide the payment gateway/PSP architecture: JET integration, fees, Pix/card, installments, settlement, reconciliation, antifraud/chargeback and operational constraints. | `JET-KB-069`; `STR-023` |
-| `PEN-030` | Study and decide full freight architecture: checkout rating, services/carriers, coverage, deadlines, rules, JET/Sankhya integration, tracking and operational exceptions. | `JET-KB-068`; `STR-022` |
+| `PEN-029` | Study and decide the payment gateway/PSP architecture. Provider decision recorded: Pagar.me. | `MN-DEC-011`; `STR-023`, `STR-025` |
+| `PEN-030` | Study and decide the freight hub/architecture. Provider decision recorded: Frenet. | `MN-DEC-012`; `STR-022`, `STR-026` |
 | `PEN-031` | Define target go-live and objective readiness/Go-No-Go criteria using payment/freight viability and other blockers. | `STR-024`; Platform Map |
 | `PEN-032` | Plan publication, domain/DNS, cutover window, dependencies, post-publish validation and contingency. | `JET-KB-055`; launch layer |
 | `PEN-033` | Review admin users, least-privilege access and first-access/e-mail behavior. | `JET-KB-004`–`006`; `UNC-008`; `MOD1-VIS-001/002` |
@@ -62,6 +62,15 @@ Board: https://trello.com/b/4h9NzL77/jet-knowledge-metal-nobre
 | `PEN-037` | Operate first-seven-day post-go-live hypercare across checkout, integrations and customer-impact signals. | Planning-derived operations |
 | `PEN-038` | Confirm current JET support channel, handoff, owners and escalation route. | `JET-KB-070`; `UNC-009` |
 | `PEN-039` | Extract Pack A targeted visual evidence from the training videos according to the Phase 4 map. | `docs/evidence/evidence-index.md`; Phase 5 validation |
+| `PEN-042` | Integrate/configure Pagar.me with JET and validate the actual payment flow before Go/No-Go. | `MN-DEC-011`; `STR-025`; Integration Matrix; `PEN-035` |
+| `PEN-043` | Integrate/configure Frenet with JET and validate checkout freight calculation/operational flow before Go/No-Go. | `MN-DEC-012`; `STR-026`; Integration Matrix; `PEN-035` |
+
+## Marketplace / Sankhya financial calculation
+
+| ID | Scope | Canonical links |
+|---|---|---|
+| `PEN-040` | Include the marketplace `Valor Frete Pago` in the variable-cost calculation used for margin analysis; follow up the change requested from Fulvio and validate the result. | Operational observation recorded 2026-08-27; Trello carries live state. |
+| `PEN-041` | Diagnose and correct the variable-expense calculation failure observed on TOP 313 / TOP 306 when automatic commission calculation is disabled so integration can populate the actual seller commission. | Root cause remains unconfirmed; preserve observed correlation only until diagnosis. |
 
 ## Document-readiness linkage
 
