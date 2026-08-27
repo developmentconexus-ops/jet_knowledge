@@ -55,10 +55,10 @@ It is **not** a live task board. Current `PEN-###` status, phase and due dates r
 | Integration queues | Domain queues and load/cleanup actions | JET + integrator | Activation controls feed availability; load/cleanup should be operated with integrator/JET support. | `JET-RULE-004` |
 | Marketplace taxonomy | Future category mapping toward marketplaces | Integration / AnyMarket path | Training shows de/para concept, not a finished Metal Nobre mapping. | `PEN-028` |
 | Google/XML catalog | Catalog distribution capability | Integration / external ecosystem | Training proves capability/context, not completed production configuration. | `PEN-028` |
-| Freight | Checkout/logistics ecosystem | UNKNOWN until architecture decision | App Store partner examples do not select the Metal Nobre solution. | `PEN-030` |
-| Payment | Checkout payment ecosystem | UNKNOWN until architecture decision | Training transcripts do not define the final gateway/PSP. | `PEN-029` |
+| Freight | Checkout/logistics ecosystem | `FRENET` selected by Metal Nobre; implementation via JET/integration | Frenet is the chosen freight hub. Provider selection is closed; configuration and end-to-end rating/operational validation are still required. | `MN-DEC-012`, `PEN-043`, `PEN-035` |
+| Payment | Checkout payment ecosystem | `PAGAR.ME` selected by Metal Nobre; implementation via JET/integration | Pagar.me is the chosen gateway/PSP and contracting has started. Provider selection is closed; configuration and end-to-end payment validation are still required. | `MN-DEC-011`, `PEN-042`, `PEN-035` |
 | Support handoff | Operational support route | UNKNOWN current state | Training records historical pre-handoff state only. | `UNC-009`, `PEN-038` |
-| Go-live readiness | Publication/cutover | Metal Nobre + JET/integrators | Must be evidence-driven across payment, freight, catalog, integrations, access, content and E2E flow. | `PEN-031`–`PEN-037` |
+| Go-live readiness | Publication/cutover | Metal Nobre + JET/integrators | Must be evidence-driven across payment, freight, catalog, integrations, access, content and E2E flow. | `PEN-031`–`PEN-037`, `PEN-042`, `PEN-043` |
 
 ## Cross-cutting guardrails
 
