@@ -69,6 +69,12 @@ These drafts deliberately prioritize **knowledge completeness over ISO formattin
 
 They are not yet assigned an official Metal Nobre IT code, owner, approver, review cadence or controlled-document header because those elements were not established by the analyzed sources.
 
+Stable procedure knowledge from release-blocked topics has also been preserved in:
+
+- `docs/iso/drafts/release-blocked-procedural-knowledge.md`.
+
+That file captures what is already known about admin access, transactional senders/templates, integration queues, Product Similar, Produtos Aguardados / Avise-me, banners, custom pages and the privacy-policy publication mechanism while explicitly retaining each topic's existing release blocker.
+
 ## Strategic second-viewing audit
 
 The planned rewatch has also been prepared as a delta-oriented audit:
