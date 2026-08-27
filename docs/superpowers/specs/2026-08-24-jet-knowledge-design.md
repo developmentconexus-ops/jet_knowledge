@@ -90,7 +90,7 @@ Cada item deverá carregar, quando aplicável:
 4. Visual Evidence Map. — **CONCLUÍDO**
 5. Validação transcript ↔ tela. — **CONCLUÍDO**
 6. Construção da camada canônica: Platform Map, Knowledge Base, Pending/Decision Registers, Integration Matrix, Strategy Playbook e Evidence Index. — **CONCLUÍDO (v1)**
-7. Futuramente: POs/ITs.
+7. POs/ITs. — **READINESS GATE CONCLUÍDO; redação/release seguirá somente onde a base está suficientemente decidida/validada**
 8. Futuramente: RAG/knowledge para agentes.
 9. Futuramente: arquitetura mínima do time de agentes.
 
@@ -105,9 +105,22 @@ Cada item deverá carregar, quando aplicável:
 - `docs/registers/uncertainties.md` — lacunas e caminho exigido para resolução.
 - `docs/registers/pending-index.md` — índice canônico de escopo das pendências; status vivo continua no Trello.
 
+## Phase 7 — document readiness
+
+`docs/iso/phase-7-document-readiness.md` classifica cada candidato a PO/IT em:
+
+- `READY_FOR_DRAFT`;
+- `DRAFT_READY_RELEASE_BLOCKED`;
+- `BLOCKED`;
+- `DEFER`.
+
+O gate não cria um segundo backlog: `PEN-###` e `UNC-###` existentes continuam donos das lacunas. Os dois primeiros ITs recomendados para redação são atualização massiva de campos JET via planilha e manutenção de grupos de produtos, pois possuem procedimento/evidência/guardrails suficientes sem depender de decisão operacional ainda aberta.
+
 ## Regra para as próximas etapas
 
 PO/IT, RAG e agentes devem consumir a camada canônica v1, **não** os transcripts crus como fonte operacional direta. Quando houver conflito com estado vivo ou nova evidência, atualizar a camada canônica preservando proveniência/supersessão.
+
+Um PO/IT não deve ser liberado como instrução operacional se o texto precisar preencher por inferência um `UNKNOWN`, `UNC-###`, mapeamento de autoridade ou valor atual de go-live ainda não validado.
 
 ## Board operacional
 
