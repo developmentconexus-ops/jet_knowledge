@@ -89,3 +89,38 @@ ui_context: training-time interface
 ```
 
 Never cite the existence of a screenshot/clip as proof of something that is only spoken, inferred or time-sensitive.
+
+## Estado do material bruto de treinamento — 02/09/2026
+
+Material em `Videos/Treinamento_Ecommerce/` (fora deste repo: 3,2 GB de vídeo e
+áudio, e contém tela de painel com dados sensíveis).
+
+| Módulo | Vídeo | Transcrito | Pacote A (evidência visual) | Canônico derivado |
+|---|---|---|---|---|
+| MOD1 | sim | `Transcripto MOD1.txt` | 4 clipes + 5 frames | `knowledge-base.md` |
+| MOD2 | sim | `Transcripto MOD2.txt` | 9 clipes + 8 frames | `knowledge-base.md` |
+| MOD3 | **não existe** — Fabrício entregou lista de 20 tutoriais (`video/MOD3/MOD3.txt`) | n/a | n/a | `campanhas-busca-venda-assistida.md` |
+| MOD4 | sim (66 min, 28/08) | `AUDIO_COMPLETO_MOD4.{txt,srt,vtt,tsv,json}` — Whisper local, 02/09 | **pendente** | `frete-e-pagamento-mod4.md` |
+
+Manifesto do Pacote A: `evidence/manifest_pack_a.csv`, 26 visuais com
+`visual_id`, timestamp de início/fim e caminho do arquivo. `MOD1-VIS-004` está
+marcado como sensível (escopo e filas) e exige revisão antes de qualquer upload
+externo.
+
+### Como transcrever um módulo novo
+
+`ffmpeg` e `whisper` estão instalados na máquina do Leandro — não é preciso
+passar por serviço externo, e o áudio não sai da máquina:
+
+```bash
+ffmpeg -y -i "video/MODn/<arquivo>.mp4" -vn -ac 1 -ar 16000 -c:a libmp3lame -q:a 5 "audio/AUDIO_COMPLETO_MODn.mp3"
+PYTHONIOENCODING=utf-8 whisper "audio/AUDIO_COMPLETO_MODn.mp3" --model small --language pt --output_format all --output_dir resultados --fp16 False
+```
+
+Roda em CPU a cerca de 0,75x do tempo real (66 min de áudio levaram 48 min).
+O `.tsv` e o `.json` carregam timestamps por segmento — é por eles que se
+recorta o Pacote A depois.
+
+Transcrição automática erra nome próprio: "frenete" (Frenet), "Sunker"
+(Sankhya), "Pixie" (PIX), "GDLog" (Jadlog). Sentido se reconstrói; **número
+crítico se reconfere na tela**.
