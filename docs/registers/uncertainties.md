@@ -20,6 +20,9 @@ Resolution must come from the named evidence path; inference is not an acceptabl
 | `UNC-008` | Exact first-access/e-mail behavior before vs after publication, including temporary password, `Recuperar Senha`, dispatch infrastructure and sender relationship. | Current JET behavior/support validation in project context. | `JET-KB-006`; `PEN-033`, `PEN-014` |
 | `UNC-009` | Current JET support handoff state. Training only proves that handoff had not yet completed at that historical moment. | Confirm current support channel, owners and escalation route. | `JET-KB-070`; `PEN-038` |
 | `UNC-010` | Current status of features described as “being discontinued”, especially customer product comments. | Revalidate current JET feature availability/status before documentation or agent use. | `JET-KB-071` |
+| `UNC-011` | Oferta relâmpago (declara plano Evolution Prime), Gestão de brindes (Evolution) e Desconto progressivo (Evolution Pro/NEO) estão contratados no nosso plano? Os três aparecem no menu do painel, o que não prova acesso. | Fabrício / JET. | `campanhas-busca-venda-assistida.md` |
+| `UNC-012` | Versão do front-end/layout da loja. Etiqueta de vitrine do Leve X Pague Y exige ≥ 2.71.72; imagem promocional do Desconto progressivo exige layout NEO ≥ 2.71.49. | Fabrício / JET. | `campanhas-busca-venda-assistida.md`; `PEN-050` |
+| `UNC-013` | A integração alimenta o preço "De", o "Por" ou ambos no cadastro do produto na JET? Define o resultado de toda campanha percentual e o risco de a oferta relâmpago ser sobrescrita pela sincronização. | BLP + teste real ponta a ponta. | `campanhas-busca-venda-assistida.md`; `PEN-035` |
 
 ## Resolution states
 
