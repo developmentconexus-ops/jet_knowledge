@@ -35,7 +35,7 @@ Um agente que só leia o platform-map vai concluir que essas coisas não existem
 | Marcas | COBERTO | `PEN-005`, `PEN-006` |
 | Variações de produtos (grade) | COBERTO | não é a estratégia atual (`MN-DEC-002`) |
 | Disponibilidade de produto | COBERTO | — |
-| Campos personalizados no produto | ⚠ LACUNA | candidato natural para os campos `AD_*` do Sankhya; exige decisão de autoridade antes de qualquer uso |
+| Campos personalizados no produto | COBERTO | na tela chama-se **Personalização**: opção que o cliente escolhe na PDP, não repositório de atributo de dado. Ver `estado-da-loja-2026-09-02.md` |
 | Sugestões de conjuntos | COBERTO | — |
 | Ordenação de produtos | LACUNA | afeta merchandising de vitrine e listagem |
 | Kits de produtos | COBERTO | — |
