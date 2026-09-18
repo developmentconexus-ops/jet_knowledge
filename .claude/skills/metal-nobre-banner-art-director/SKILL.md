@@ -20,11 +20,13 @@ Its job is to transform:
 
 into a concise, production-ready **Image Generation Brief**.
 
-When available, use the UI/UX Pro Max `banner-design` skill as the general banner-design method. This skill adds only the Metal Nobre-specific decisions.
+When available, use UI/UX Pro Max `banner-design` for relevant art direction, visual hierarchy, safe areas and legibility. The Metal Nobre deliverable is a static image; generic HTML/CSS, CTA and size presets do not override the current `TASK.md`.
 
 ## Core Principle
 
-**Plan here. Render elsewhere.**
+**Plan in the director task. Render in a separate task for each brand.**
+
+In Codex, read [references/codex-imagegen-handoff.md](references/codex-imagegen-handoff.md) when preparing the generator handoff. Do not send a candidate prompt to generation before its explicit approval gate and verified product references.
 
 Do not carry old generated banners forward as visual references unless the user explicitly asks to replicate one.
 
@@ -56,8 +58,9 @@ Recommended reference package:
 - 1 hero product;
 - 1 main supporting product;
 - 1 secondary supporting product;
-- 1 optional additional product;
-- official logo separately.
+- 1 optional additional product.
+
+Keep the official logo outside the generator reference package when it will be applied in post-production.
 
 For each product, state its role explicitly.
 
@@ -66,7 +69,6 @@ Example:
 - Image 2 = basin paired with hero faucet
 - Image 3 = shower in secondary zone
 - Image 4 = toilet in secondary zone
-- Image 5 = official logo
 
 ## Banner System
 
@@ -122,6 +124,7 @@ The planner must return exactly these sections:
 - category
 - purpose
 - target aspect/size
+- final crop target versus feasible generation framing
 - product story
 - product hierarchy
 - environment
@@ -155,6 +158,7 @@ Check:
 - logo fidelity
 - text correctness
 - JET output constraints
+- final-crop visibility and safe areas
 
 ## Anti-Patterns
 
@@ -165,7 +169,15 @@ Do not:
 - carry superseded dimensions or old prompts;
 - ask the image model to decide the product mix;
 - ask the image model to recreate the logo when the real asset is available;
+- assume that the generated image has the JET's exact final dimensions;
 - overload the prompt with internal process language.
+
+## Reference routing
+
+- [references/art-direction.md](references/art-direction.md): read when choosing a category's visual language.
+- [references/jet-spec.md](references/jet-spec.md): read when setting a production export target.
+- [references/planner-output-template.md](references/planner-output-template.md): read when the output needs the standard five-section format.
+- [references/codex-imagegen-handoff.md](references/codex-imagegen-handoff.md): read when dispatching a Codex generator task.
 
 ## Success Criterion
 

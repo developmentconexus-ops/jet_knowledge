@@ -33,10 +33,13 @@ Método complementar quando disponível:
 `UI/UX Pro Max / banner-design`
 https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/.claude/skills/banner-design/SKILL.md
 
-### B. Sessão ChatGPT Images
-Recebe diretamente:
-- imagens reais dos produtos escolhidos;
-- prompt produzido pelo planner.
+### B. Tarefa Codex de geração — uma por marca
+Mantém a geração e suas revisões visuais fora da conversa de planejamento. Recebe um pacote fechado após D1 e B2:
+- brief e prompt aprovados;
+- imagens reais dos produtos escolhidos, anexadas diretamente e mapeadas por SKU/função;
+- destino dos arquivos e critério de recorte para o tamanho final.
+
+Usa a ferramenta integrada de geração de imagens do Codex por padrão. A tarefa não decide estratégia, mix ou copy e não reconstrói instruções a partir de ZIPs, prompts antigos ou histórico de chat. Salva a geração selecionada e a prévia recortada em arquivos versionados no workspace; devolve os caminhos, dimensões medidas e pontos de QA para D2.
 
 Responsável por gerar:
 - ambiente;
@@ -68,11 +71,13 @@ Responsável por:
 5. Quando fidelidade importa, imagens reais dos produtos são anexadas diretamente à sessão de geração.
 6. Logo oficial é aplicada deterministicamente na pós-produção.
 7. Copy final é aplicada deterministicamente na pós-produção.
-8. O gerador não deve inventar, substituir, duplicar ou redesenhar produtos obrigatórios.
+8. O gerador não deve inventar, substituir, duplicar ou redesenhar produtos obrigatórios; verificar visualmente, pois o prompt não garante fidelidade exata.
 9. Entregável é imagem. Não produzir HTML/CSS/página como parte deste fluxo.
 10. Limite informado da JET: **máximo 1 MB**.
 11. Recomendação originalmente informada pela JET: **1920 × 500 px**; Metal Nobre pode deliberadamente usar altura menor.
 12. A altura não vira regra global até ser testada visualmente na página real.
+13. A proporção da imagem gerada e o tamanho final da JET são coisas distintas. O enquadramento da geração deve reservar uma faixa segura para o recorte final; D2 avalia a prévia já recortada.
+14. Uma tarefa Codex separada por marca concentra geração e iterações. A conversa de planejamento concentra decisões e gates.
 
 ## 4. Caso de validação atual — Deca
 
@@ -80,7 +85,7 @@ Responsável por:
 
 A nova metodologia está aceita.
 
-O **brief Deca 1920 × 300 px descrito abaixo é o candidato atual, ainda aguardando aprovação explícita do usuário antes da geração**.
+O **brief Deca 1920 × 320 px descrito abaixo é o candidato atual, ainda aguardando aprovação explícita do usuário antes da geração**. O usuário aprovou o método de tarefa geradora separada e permitiu testar 320 px; isso não aprova o brief/prompt Deca no Gate D1.
 
 Não gerar a imagem até esse gate ser aprovado.
 
@@ -112,14 +117,17 @@ Supporting:
 
 ### Dimensão em validação nesta rodada
 
-`1920 × 300 px`
+`1920 × 320 px`
 
-Razão aproximada: `6.4:1`.
+Razão: `6:1`.
 
 Motivo:
 - o banner de 500/650 px ocupava altura excessiva na página de marca;
 - a intenção é permitir que o usuário veja a abertura da marca e chegue mais cedo à grade de produtos;
-- 300 px é **hipótese de UX a testar na JET**, não nova regra técnica universal.
+- 320 px dá um pouco mais de espaço aos quatro produtos e à leitura do banner sem voltar à altura de 500 px;
+- 320 px é **hipótese de UX a testar na JET**, não nova regra técnica universal.
+
+A geração integrada não oferece controle de dimensão exata no chamado da ferramenta. A proporção final 6:1 também excede o limite 3:1 documentado para geração direta. Portanto, compor para um recorte seguro: a imagem base pode ter mais altura, mas todos os produtos obrigatórios e o espaço de branding devem permanecer dentro da faixa que resultará em 1920 × 320 px. Verificar o recorte real antes de D2.
 
 ### Direção de arte proposta para esta rodada
 
@@ -193,7 +201,7 @@ A logo oficial **não precisa ser fornecida ao gerador** se ela será aplicada s
 
 Usar somente depois da aprovação do brief:
 
-> Create one ultra-wide premium architectural bathroom scene for a 1920×300 px e-commerce brand banner. Use the four supplied Deca product images as mandatory visual references and preserve their recognizable geometry, proportions, colors and finishes.
+> Create one premium wide architectural bathroom scene intended for a final 1920×320 px e-commerce brand-banner crop. The generated landscape image may be taller; keep all four mandatory products and the left-side branding space within the central crop-safe horizontal band. Use the four supplied Deca product images as mandatory visual references and preserve their recognizable geometry, proportions, colors and finishes.
 >
 > Build one coherent contemporary bathroom composition, not a product collage. The main hero is the supplied Black Matte Level faucet paired naturally with the supplied white Slim basin on a refined vanity. Integrate the supplied Black Matte ceiling shower as a secondary architectural element and keep the supplied white wall-hung toilet clearly visible on the far right, fully inside the frame.
 >
@@ -208,7 +216,7 @@ Princípio: o prompt não carrega toda a metodologia. O planner toma as decisõe
 ## 7. Pós-produção candidata — Deca
 
 Canvas final:
-`1920 × 300 px`
+`1920 × 320 px`
 
 Logo:
 - usar asset oficial;
@@ -255,7 +263,7 @@ Export:
 - [ ] Parece um único ambiente coerente.
 - [ ] Não parece catálogo/colagem.
 - [ ] Existe negative space utilizável à esquerda.
-- [ ] A proporção 1920×300 não esmaga/corta produtos.
+- [ ] A prévia recortada em 1920×320 não esmaga/corta produtos.
 - [ ] Produtos não tocam bordas críticas.
 
 ### Direção de arte
@@ -273,12 +281,12 @@ Export:
 - [ ] Não há texto gerado pela IA dentro da cena.
 
 ### JET
-- [ ] Arquivo final exatamente 1920×300 na rodada atual.
+- [ ] Arquivo final exatamente 1920×320 na rodada atual.
 - [ ] Arquivo final ≤ 1 MB.
 - [ ] Sem artefatos visíveis relevantes.
 - [ ] Validado dentro da página real da JET.
 - [ ] Altura permite que a grade de produtos apareça cedo o suficiente.
-- [ ] Após teste, decidir manter 300 px ou recalibrar.
+- [ ] Após teste, decidir manter 320 px ou recalibrar.
 
 ## 9. Gates de decisão
 
@@ -291,13 +299,13 @@ Sem D1:
 - não generalizar.
 
 ### Gate D2 — Aprovar geração base
-Verificar produto, composição e direção visual antes de aplicar branding final.
+Verificar produto, composição e direção visual na imagem base **e na prévia recortada em 1920×320** antes de aplicar branding final.
 
 ### Gate D3 — Aprovar versão pós-produzida
 Logo/copy corretos, dimensão e peso corretos.
 
 ### Gate D4 — Validar na página real JET
-A captura/visualização na página decide se 300 px funciona.
+A captura/visualização na página decide se 320 px funciona.
 
 ### Gate D5 — Congelar learnings
 Somente depois do teste real atualizar a skill/references com regras verdadeiramente generalizáveis.
@@ -322,7 +330,7 @@ Não começar Docol antes de concluir o ciclo Deca até o gate de validação na
 - não confiar em memória visual do modelo quando há packshot real;
 - não pedir para a IA recriar logo;
 - não codificar HTML/CSS para resolver este entregável;
-- não promover 300 px a regra global antes do teste real;
+- não promover 320 px a regra global antes do teste real;
 - não atualizar a skill com uma preferência específica da Deca como se fosse regra multi-brand.
 
 ## 12. Cold start recomendado para Codex

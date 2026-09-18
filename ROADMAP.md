@@ -28,7 +28,7 @@ O processo deve ser generalizável sem transformar uma marca em template de outr
 Separar planejamento, geração e pós-produção.
 
 ### Contrato
-`Planner / Art Director → ChatGPT Images → Post-production → JET validation`
+`Planner / Art Director → tarefa Codex de geração por marca → Post-production → JET validation`
 
 ### Artefato canônico
 `.claude/skills/metal-nobre-banner-art-director/SKILL.md`
@@ -45,7 +45,7 @@ Separar planejamento, geração e pós-produção.
 
 ---
 
-## B1 — Deca: fechar brief de 300 px
+## B1 — Deca: fechar brief de 320 px
 
 ### Objetivo
 Transformar o aprendizado dos testes anteriores em um brief simples para a nova arquitetura.
@@ -54,7 +54,8 @@ Transformar o aprendizado dos testes anteriores em um brief simples para a nova 
 - 4 produtos obrigatórios;
 - Product Story;
 - copy;
-- target experimental `1920×300`;
+- target experimental `1920×320`;
+- geração planejada para recorte seguro, pois o alvo final 6:1 excede a proporção de geração direta documentada;
 - direção arquitetônica/editorial;
 - layout horizontal com negative space à esquerda.
 
@@ -98,11 +99,12 @@ Gerar apenas **ambiente + integração dos produtos**, sem branding.
 - abrir sessão de imagem;
 - anexar as quatro referências diretamente;
 - usar o prompt aprovado;
-- gerar uma composição coerente em formato ultra-wide;
+- gerar a composição numa tarefa Codex separada, com arquivos versionados no workspace;
+- produzir uma prévia recortada em 1920×320 antes da avaliação visual;
 - não pedir logo/copy ao modelo.
 
 ### Gate
-**D2 — aprovação visual da geração base.**
+**D2 — aprovação visual da geração base e da prévia recortada.**
 
 ### Reprovar se
 - faltar produto;
@@ -112,7 +114,8 @@ Gerar apenas **ambiente + integração dos produtos**, sem branding.
 - composição virar colagem;
 - ambiente dominar produtos;
 - negative space da esquerda não funcionar;
-- produto hero perder hierarquia.
+- produto hero perder hierarquia;
+- o recorte 1920×320 cortar ou comprimir visualmente qualquer produto obrigatório.
 
 ---
 
@@ -125,7 +128,7 @@ Transformar a geração aprovada em banner de produção.
 - aplicar logo Deca oficial;
 - aplicar headline/supporting;
 - ajustar hierarquia tipográfica;
-- recortar/redimensionar exatamente para 1920×300;
+- recortar/redimensionar exatamente para 1920×320;
 - exportar master;
 - otimizar formato/peso;
 - garantir ≤ 1 MB.
@@ -150,7 +153,7 @@ Validar UX, não apenas a imagem isolada.
 - validar legibilidade de logo/copy;
 - validar cortes e safe area;
 - validar qualidade após compressão/upload;
-- se necessário, comparar 300 px com pequena variação de altura, sem assumir regra antes do teste.
+- se necessário, comparar 320 px com pequena variação de altura, sem assumir regra antes do teste.
 
 ### Gate
 **D4 — decisão da altura e composição de produção.**
@@ -159,7 +162,7 @@ Validar UX, não apenas a imagem isolada.
 A página parece uma página de e-commerce premium e o banner não impede acesso visual rápido aos produtos.
 
 ### Saída possível
-- manter 1920×300;
+- manter 1920×320;
 - ou recalibrar a altura com evidência real da JET.
 
 ---
@@ -258,11 +261,11 @@ Não automatizar cedo demais. Primeiro provar Deca + Docol.
 ```text
 B0 Método
   ↓
-B1 Deca brief 300px — D1
+B1 Deca brief 320px — D1
   ↓
 B2 Referências reais
   ↓
-B3 Geração sem branding — D2
+B3 Geração sem branding + prévia recortada — D2
   ↓
 B4 Pós-produção — D3
   ↓
