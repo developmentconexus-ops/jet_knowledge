@@ -20,6 +20,19 @@ Board operacional: https://trello.com/b/4h9NzL77/jet-knowledge-metal-nobre
 Um arquivo Markdown pode **indexar** uma pendência `PEN-###`; nunca duplicar o
 status dela como autoridade. Status de Markdown envelhece e mente.
 
+## Cold start de agentes
+
+Depois deste contrato:
+
+1. se existir `TASK.md` na raiz e o pedido atual estiver dentro daquele escopo, leia-o;
+2. leia `ROADMAP.md` quando o `TASK.md` apontar para uma sequência/gates;
+3. siga as skills e references explicitamente roteadas pelo `TASK.md`;
+4. só então aprofunde em documentos históricos, quando uma lacuna factual exigir.
+
+`TASK.md` e `ROADMAP.md` são contexto de trabalho e planejamento. Eles **não**
+podem sobrescrever fatos canônicos, decisões registradas, guardrails nem o
+status operacional vivo do Trello.
+
 ## As sete guardrails
 
 Herdadas do `platform-map.md` e válidas para qualquer escrita neste repo:
