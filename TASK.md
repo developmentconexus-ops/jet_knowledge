@@ -85,9 +85,7 @@ Responsável por:
 
 A nova metodologia está aceita.
 
-O **brief Deca 1920 × 320 px descrito abaixo é o candidato atual, ainda aguardando aprovação explícita do usuário antes da geração**. O usuário aprovou o método de tarefa geradora separada e permitiu testar 320 px; isso não aprova o brief/prompt Deca no Gate D1.
-
-Não gerar a imagem até esse gate ser aprovado.
+O **brief e o prompt Deca 1920 × 320 px descritos abaixo foram aprovados explicitamente pelo usuário em 2026-09-18 (Gate D1)**. As quatro referências de B2 foram conferidas por SKU contra as fichas técnicas da Deca e estão preparadas no workspace de imagens. Próximo passo: B3, geração base em tarefa Codex separada e avaliação no Gate D2.
 
 ### Produtos obrigatórios
 
@@ -197,9 +195,9 @@ Anexar diretamente as imagens nesta ordem, idealmente em boa resolução e com f
 
 A logo oficial **não precisa ser fornecida ao gerador** se ela será aplicada somente em pós-produção.
 
-## 6. Generation Prompt candidato
+## 6. Generation Prompt aprovado
 
-Usar somente depois da aprovação do brief:
+Prompt aprovado no Gate D1:
 
 > Create one premium wide architectural bathroom scene intended for a final 1920×320 px e-commerce brand-banner crop. The generated landscape image may be taller; keep all four mandatory products and the left-side branding space within the central crop-safe horizontal band. Use the four supplied Deca product images as mandatory visual references and preserve their recognizable geometry, proportions, colors and finishes.
 >
@@ -291,7 +289,7 @@ Export:
 ## 9. Gates de decisão
 
 ### Gate D1 — Aprovar brief/prompt Deca
-Estado atual: **aguardando aprovação explícita do usuário**.
+Estado atual: **aprovado explicitamente pelo usuário em 2026-09-18**.
 
 Sem D1:
 - não gerar;
@@ -342,4 +340,4 @@ Não começar Docol antes de concluir o ciclo Deca até o gate de validação na
 5. somente as references pedidas pela skill
 6. consultar histórico/commits apenas se ainda houver uma lacuna factual
 
-Ao retomar, o Codex deve começar do **Gate D1**, não da geração.
+Ao retomar, o Codex deve começar de **B3 (geração base)**. D1 foi aprovado e B2 concluído em 2026-09-18. O mapa de referências com fontes e caminhos locais está em `C:\Users\leandro.theodoro\Pictures\imagens e-commerce\deca\referencias\REFERENCIAS.md`.

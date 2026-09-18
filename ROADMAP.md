@@ -70,7 +70,7 @@ Transformar o aprendizado dos testes anteriores em um brief simples para a nova 
 ### Critério de aceite
 O usuário consegue responder “aprovado” sem que o gerador ainda tenha sido chamado.
 
-**Checkpoint atual:** aqui.
+**Checkpoint:** Gate D1 aprovado explicitamente pelo usuário em 2026-09-18.
 
 ---
 
@@ -105,6 +105,8 @@ Gerar apenas **ambiente + integração dos produtos**, sem branding.
 
 ### Gate
 **D2 — aprovação visual da geração base e da prévia recortada.**
+
+**Checkpoint atual:** B2 concluído em 2026-09-18 com quatro referências verificadas por SKU e preparadas no workspace de imagens. Executar B3 em tarefa Codex separada.
 
 ### Reprovar se
 - faltar produto;
@@ -291,6 +293,6 @@ A qualidade do programa vem de:
 
 Para a próxima sessão/Codex:
 
-**começar em B1 / Gate D1**.
+**começar em B3 — geração base**.
 
-O brief e o prompt candidatos estão em `TASK.md`. Não gerar Deca até aprovação explícita do usuário.
+O brief e o prompt em `TASK.md` foram aprovados em 2026-09-18. As quatro referências foram verificadas e estão mapeadas no workspace de imagens; gerar e parar em D2.
